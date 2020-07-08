@@ -3,10 +3,12 @@ class Config:
     """
     General configuration parent class
     """
-    SOURCES_API_BASE_URL='https://newsapi.org/v2/everything?q=bitcoin&apiKey={}'
-    ARTICLES_API_BASE_URL='https://newsapi.org/v2/sources?language=en&apiKey={}'
-    SOURCES_API_KEY=os.environ.get('fdee0f42def74c7bad48a87e16fd6f08')
-    SECRET_KEY = os.environ.get('1234')
+    NEWS_API_BASE_URL = 'https://newsapi.org/v2/sources?language=en&apiKey=fdee0f42def74c7bad48a87e16fd6f08'
+
+    ARTICLES_API_BASE_URL = 'https://newsapi.org/v2/everything?sources={}&apiKey=fdee0f42def74c7bad48a87e16fd6f08'
+
+    NEWS_API_KEY = os.environ.get('fdee0f42def74c7bad48a87e16fd6f08')
+    
 
 class ProdConfig(Config):
     """

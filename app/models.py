@@ -3,9 +3,9 @@ class Sources:
     Source class to define the source of news
     """
     
-    def __init__(self, id, title, description, url, newsCategory, language, country):
+    def __init__(self, id, name, description, url, newsCategory, language, country):
         self.id= id
-        self.title = title
+        self.name = name
         self.description = description
         self.url = url
         self.newsCategory = newsCategory
@@ -15,10 +15,10 @@ class Sources:
         
 class Articles:
     """
-    Article class to define the news article
+    class to define the news article
     """
     
-    def __init__(self,id,author,title,description,url,urlToImage,publishedAt,content):
+    def __init__(self,id,title,author,description,url,urlToImage,publishedAt,content):
         self.id = id
         self.author = author
         self.title = title

@@ -1,40 +1,48 @@
+
+<body>
 {% extends 'base.html'%}
-{%import 'macros.html' as macro%}
-<!-- Styles block -->
-{% block styles%}
-    {{ super() }}
-    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
-{% endblock %}
-<!-- Content block -->
-{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+    <title> {{ title }}</title>
+    {% else %}
+    <title> News Highlights </title>
+    {% endif %}
+</head>
+    {% block content %}
+          <link rel="stylesheet" href="{{url_for('static',filename='css/index.css') }}" type='text/css'>
+<br>
 <div class="container">
     <form>
-        <input type ="text" name= "article_query" placeholder="Search for an article" class="form-control">
-        <input type="submit"  value="Submit" class="btn btn-default">
+        <input type="text" name="article_query" placeholder="Search for Articles" class="form-control">
+        <br>
+        <input type="submit"  value="Submit" class="btn btn-primary">
     </form>
+
 </div>
-<!-- Popular Sources -->
-<h3> News Sources</h3>
-<ul>
-    {{ macro.displayArticlesList(popular)}}
-</ul>
-<!-- Upcoming Sources  -->
-<h3> Popular Sources </h3>
-<ul>
-    {{ macro.displayArticlesList(upcoming)}}
-</ul>
-<!-- Now showing articles -->
-<h3>Now Showing</h3>
-<ul>
-    {{ macro.displayArticlesList(now_showing)}}
-</ul>
-{% endblock%}
+<br>
+                            <h3 class="News"> News Sources</h3>
+                            <br>
+                        <div class="grid-container" style="display: grid;">
 
-    <div class="container-fluid footer">
-        <footer id="sticky-footer">
-            <div class="container text-center">
-                <p>Copyright &copy; Frankline Kiplangat</p>
+                        {% for general_category in general %}
+            
+                        <a  href="/newsarticle/{{general_category.id}}"
+                            class="list-group-item list-group-item " style="width: 40rem;">{{general_category.name}}</a>
+                        {% endfor %}
+            
+                    </div>
+                </div>
             </div>
-
-        </footer>
+        </div>
+      
     </div>
+    <ul>
+    </ul>
+    <br><br>
+    <footer style="color:blue; font-weight: bold;">
+                <p style="text-align: center;"> &copy; 2020 || Frankline Kiplangat </p>
+    </footer>
+    {% endblock%}
+</body>
