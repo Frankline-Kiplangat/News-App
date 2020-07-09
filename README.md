@@ -1,6 +1,6 @@
 # Password Locker
 ## Description
-*  Application that will help them list and preview news articles from various sources.
+*  Application that will help users to list and preview news articles from various sources.
 
 ## Contributor
 [Frankline Kiplangat](https://github.com/Frankline-Kiplangat)
@@ -24,8 +24,7 @@ Users can do the following with this App
 
 ## Installation Requirements
 * Python3.6
-* Git (for ubuntu OS)
-* GitBash (for windows OS)
+
 
 # If you want to contribute;
 * git clone this application  https://git@github.com:Frankline-Kiplangat/News-App.git
