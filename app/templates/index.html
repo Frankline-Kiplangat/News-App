@@ -14,15 +14,16 @@
           <link rel="stylesheet" href="{{url_for('static',filename='css/index.css') }}" type='text/css'>
 <br>
 <div class="container">
-    <form>
-        <input type="text" name="article_query" placeholder="Search for Articles" class="form-control">
+    <form style="margin-left: -95px">
+        <input type="text" name="article_query" placeholder="Search for Articles... " class="form-control" style="width: 400px">
         <br>
         <input type="submit"  value="Submit" class="btn btn-primary">
     </form>
 
 </div>
 <br>
-                            <h3 class="News"> News Sources</h3>
+    <div style="margin-left: 100px;">
+                        <h2 class="News" style="font-weight: bold;"> News Sources</h2>
                             <br>
                         <div class="grid-container" style="display: grid;">
 
@@ -36,13 +37,14 @@
                 </div>
             </div>
         </div>
-      
+      </div>
     </div>
-    <ul>
-    </ul>
+
     <br><br>
+    <div class="footer">
     <footer style="color:blue; font-weight: bold;">
                 <p style="text-align: center;"> &copy; 2020 || Frankline Kiplangat </p>
     </footer>
+    </div>
     {% endblock%}
 </body>

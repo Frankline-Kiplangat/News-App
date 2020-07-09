@@ -24,17 +24,17 @@ def index():
 def newsarticle(id):
 
     """
-    View article page function that returns the article details page and its data
+    Function that returns the article details page and its data
     """
     articles_items = get_articles(id)
     title = f'{id} | News Articles'
     return render_template('newsarticle.html',title = title,articles = articles_items)
 
-@main.route('/search/<articles_feed>')
-def search(articles_feed):
-    search_list = articles_feed.split(" ")
-    title_format = "+".join(search_list)
-    search_articles = get_articles(title_format)
+@main.route('/search/<articles_name>')
+def search(articles_name):
+    articles_name_list = articles_name.split(" ")
+    articles_name_format = "+".join(articles_name_list)
+    searched_articles = searched_articles(articles_name_format)
     title = 'News results'
     search_articles = request.args.get('articles_search')
     if search_articles:

@@ -18,11 +18,11 @@
         <div class="column" id="article-column">
 
 
-            <div class="col-md-4">
-                <img class="fadeInUp details" src="{{articles_item.urlToImage}}" width="100%">
+            <div class="col-md-6">
+                <img src="{{articles_item.urlToImage}}" width="100%">
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <p><strong>{{ articles_item.title }}</strong></p>
                 <hr>
                 <p>{{ articles_item.description }}</p>
@@ -31,7 +31,7 @@
                     <p><em>{{articles_item.content}}</em></p>
                 </div>
 
-                <div class="animated fadeInUp details">
+                <div>
                         {%if articles_item.author%}
                         <p>Posted By {{articles_item.author}}</a>.
                         </p>

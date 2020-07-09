@@ -9,6 +9,7 @@ class Config:
 
     NEWS_API_KEY = os.environ.get('fdee0f42def74c7bad48a87e16fd6f08')
     
+    SECRET_KEY= os.environ.get('SECRET_KEY')
 
 class ProdConfig(Config):
     """
